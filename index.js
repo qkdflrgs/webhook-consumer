@@ -9,7 +9,7 @@ app.post("/webhook", (req, res) => {
     if (!req.body || Object.keys(req.body).length === 0) {
         return res.status(400).json({ success: false, message: "Empty body" });
     }
-    res.status(200).json({ success: true, message: "Webhook received" });
+    return res.status(200).json({ success: true, message: "Webhook received" });
 });
 
 app.listen(PORT, () => {
